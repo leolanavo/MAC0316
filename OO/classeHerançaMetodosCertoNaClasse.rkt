@@ -64,15 +64,13 @@
                                                         ;for every intance variable you should implemente
                                                         ;the access and setter functions
                                                         (case msg
-                                                          [ (Class) Class]
+                                                          [(Class) Class]
                                                           [(valorA:) (set! valorA (car parlist))]
-                                                          [ (valorA) valorA]))])
+                                                          [(valorA) valorA]))])
 
                                      eumesmo)]
                             ))])
       euMesma))
-
-
 
 
 (define ClasseB
@@ -92,9 +90,11 @@
                                                       [(Class) Class]
                                                       [(valorB) valorB]
                                                       [(valorB:) (set! valorB (car parlist))]
-                                                      [ else (Superobj msg parlist)]))])
+                                                      [else (Superobj msg parlist)]))])
                                  eumesmo)]))])
     eumesma))
+
+
 ;now to create an object call the 'new operation on the class
 (define obA (ClasseA 'new))
 (define obB (ClasseB 'new))
